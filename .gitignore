@@ -19,3 +19,8 @@
 
 # Go workspace file
 go.work
+
+# ignore editor settings
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
