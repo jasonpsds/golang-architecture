@@ -1,0 +1,6 @@
+# Hands-on-exercise #1
+04.05.2022
+
+## Exercise - Git versioning with tags.
+Meaning = 42
+
