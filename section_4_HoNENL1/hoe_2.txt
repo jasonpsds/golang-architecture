@@ -1,0 +1,4 @@
+# Hands-on exercise #2
+03.05.2022
+
+Accessing a version of a git repo
