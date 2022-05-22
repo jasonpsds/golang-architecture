@@ -15,6 +15,10 @@ type human interface {
 	speak()
 }
 
+func foo(h human) {
+	h.speak()
+}
+
 type secretAgent struct {
 	person
 	ltk bool
@@ -45,5 +49,10 @@ func main() {
 	y = sa1
 	x.speak()
 	y.speak()
+	fmt.Println("------------") // vid 33
+	foo(x)
+	foo(y)
+	foo(p1)
+	foo(sa1)
 	// fmt.Printf("%T\n", x)
 }
