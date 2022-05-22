@@ -15,16 +15,35 @@ type human interface {
 	speak()
 }
 
+type secretAgent struct {
+	person
+	ltk bool
+}
+
+func (sa secretAgent) speak() {
+	fmt.Println("I'am a seceret agent, the name is", sa.first)
+}
+
 func main() {
 	p1 := person{
-		first: "James",
+		first: "Miss Moneypenny",
+	}
+
+	sa1 := secretAgent{
+		person: person{
+			first: "Larry Flint",
+		},
+		ltk: true,
 	}
 
 	fmt.Printf("%T\n", p1)
 
 	// a value can be of more than one type
 	// p1 is both type person and human
-	var x human
+	var x, y human
 	x = p1
-	fmt.Printf("%T\n", x)
+	y = sa1
+	x.speak()
+	y.speak()
+	// fmt.Printf("%T\n", x)
 }
